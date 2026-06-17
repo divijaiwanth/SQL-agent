@@ -4,14 +4,14 @@ SQL-agent is a robust, local-first conversational agent designed to interact sea
 
 It connects to your database, automatically extracts relevant schema information, constructs syntactically correct SQL queries, executes them securely, and synthesizes the results into human-readable answers.
 
-## ✨ Key Features
+## Key Features
 * **Zero-Shot SQL Generation** — Ask questions in plain English; no prompt engineering required.
 * **Fully Offline Inference** — Powered by local Ollama models (like `llama3`), ensuring complete data privacy and no API costs.
 * **Intelligent ReAct Loop** — The agent "thinks" before it acts, queries available tables, reads schemas, and self-corrects if a query fails.
 * **LangSmith Observability** — Full integration with LangSmith for beautiful, step-by-step traces of the agent's internal reasoning.
 * **Lightning Fast Setup** — Uses `uv` for blazing fast Python dependency management.
 
-## 🧱 Project Structure
+## Project Structure
 ```text
 sql-agent/
 ├── agent.py              # Main agent execution loop and database connection
@@ -22,7 +22,7 @@ sql-agent/
 └── README.md             # This documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 Ensure you have `uv` and `ollama` installed on your machine.
@@ -54,7 +54,7 @@ Execute the agent to see it solve the sample question:
 uv run python agent.py
 ```
 
-## 🛠 Technology Stack
+## Technology Stack
 | Component | Technology |
 | --- | --- |
 | **Agent Framework** | LangChain / LangGraph (`create_sql_agent`) |
@@ -64,7 +64,7 @@ uv run python agent.py
 | **Package Management** | `uv` |
 | **Core Language** | Python |
 
-## 🔍 How It Works
+## How It Works
 
 1. **Initialization**
    The application connects to `Chinook.db` using LangChain's `SQLDatabase` utility and instantiates the `ChatOllama` model.
@@ -75,7 +75,7 @@ uv run python agent.py
 4. **Execution & Synthesis**
    The agent runs the query against the database (`sql_db_query`), observes the raw data output, and synthesizes a natural language final answer.
 
-## 💡 Why SQL-agent?
+## Why SQL-agent?
 SQL-agent showcases strong end-to-end AI engineering skills — from handling database integrations to building a complete, scalable, and fully local agentic workflow. 
 
 It combines:
