@@ -28,6 +28,7 @@ agent_executor = create_sql_agent(
 
 # 3. Test the agent
 if __name__ == "__main__":
+    #you can write you own query or take inputs from the users when using this in code in other programs
     question = "Which genre on average has the longest tracks?"
     print(f"\nQuestion: {question}\n")
     
